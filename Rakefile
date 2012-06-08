@@ -1,9 +1,9 @@
 #!/usr/bin/env rake
 
-$LOAD_PATH.unshift File.expand_path("lib", __FILE__)
+$LOAD_PATH.unshift File.expand_path("lib", File.dirname(__FILE__))
 
-require 'bundler'
-require 'file_utils/version'
+require "rspec/core/rake_task"
+require "file_utils/version"
 
 def version
   FileUtils::VERSION
@@ -18,7 +18,7 @@ task :build do
 end
 
 task :release => :build do
-  system "gem push pkg/#{project_name}-#{version}.gem"
+  system "gem push #{project_name}-#{version}.gem"
 end
 
 RSpec::Core::RakeTask.new do |task|
