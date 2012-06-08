@@ -18,7 +18,7 @@ task :build do
 end
 
 task :release => :build do
-  system "gem push pkg/#{{project_name}}-#{version}.gem"
+  system "gem push pkg/#{project_name}-#{version}.gem"
 end
 
 RSpec::Core::RakeTask.new do |task|
