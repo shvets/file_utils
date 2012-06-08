@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5aea4d68-4507-4177-a112-c280e0c8edfa" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.rvmrc" afterPath="$PROJECT_DIR$/.rvmrc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rakefile" afterPath="$PROJECT_DIR$/Rakefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="file_utils.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,7 +36,7 @@
       <file leaf-file-name="Rakefile" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Rakefile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="28" selection-start="148" selection-end="148" vertical-scroll-proportion="0.10171306">
+            <state line="29" column="6" selection-start="489" selection-end="489" vertical-scroll-proportion="0.5899358">
               <folding />
             </state>
           </provider>
@@ -233,7 +232,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Rakefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="28" selection-start="148" selection-end="148" vertical-scroll-proportion="0.10171306">
+        <state line="29" column="6" selection-start="489" selection-end="489" vertical-scroll-proportion="0.5899358">
           <folding />
         </state>
       </provider>
