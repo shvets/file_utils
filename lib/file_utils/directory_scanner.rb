@@ -1,13 +1,19 @@
 class DirectoryScanner
-  def scan dir, includes, excludes
+  def scan dir, params={}
     files = []
 
-    scan_with_files dir, Array(includes), Array(excludes), files
+    scan_with_files dir, tokenize(params[:includes]), tokenize(params[:excludes]), files
 
     normalize(files, dir)
   end
 
   private
+
+  def tokenize s
+    return [] if s.nil?
+
+    s.split(/\s+|,/).reject {|t| t.length == 0}
+  end
 
   def scan_with_files dir, includes, excludes, files
     Dir.new(dir).each do |file_name|
@@ -15,12 +21,12 @@ class DirectoryScanner
         full_name = dir + '/' + file_name
 
         if File.directory? full_name
-          if check_name(full_name, includes, excludes)
+          if check_name(file_name, includes, excludes)
             files << full_name
             scan_with_files(full_name, includes, excludes, files)
           end
         else # file
-          if check_name(full_name, includes, excludes)
+          if check_name(file_name, includes, excludes)
             files << full_name
           end
         end
@@ -52,6 +58,10 @@ class DirectoryScanner
     end
 
     false
+  end
+
+  def blank? s
+    s.nil? or s.strip.length == 0
   end
 
 end
