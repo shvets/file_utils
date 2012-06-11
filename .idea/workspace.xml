@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5aea4d68-4507-4177-a112-c280e0c8edfa" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/file_utils/directory_scanner.rb" afterPath="$PROJECT_DIR$/lib/file_utils/directory_scanner.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/directory_scanner_spec.rb" afterPath="$PROJECT_DIR$/spec/directory_scanner_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/file_utils/version.rb" afterPath="$PROJECT_DIR$/lib/file_utils/version.rb" />
     </list>
     <ignored path="file_utils.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,6 +51,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="version.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/file_utils/version.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="18" selection-start="35" selection-end="35" vertical-scroll-proportion="0.02909091">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="subject.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@file_utils/gems/rspec-core-2.9.0/lib/rspec/core/subject.rb">
           <provider selected="true" editor-type-id="text-editor">
@@ -62,10 +69,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="directory_scanner.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="directory_scanner.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/file_utils/directory_scanner.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="65" selection-end="65" vertical-scroll-proportion="0.11636364">
+            <state line="4" column="0" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -88,6 +95,7 @@
         <option value="$PROJECT_DIR$/Rakefile" />
         <option value="$PROJECT_DIR$/lib/file_utils/directory_scanner.rb" />
         <option value="$PROJECT_DIR$/spec/directory_scanner_spec.rb" />
+        <option value="$PROJECT_DIR$/lib/file_utils/version.rb" />
       </list>
     </option>
   </component>
@@ -529,6 +537,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/file_utils/directory_scanner.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/spec/directory_scanner_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="49" selection-start="551" selection-end="551" vertical-scroll-proportion="0.0">
@@ -536,9 +551,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/file_utils/directory_scanner.rb">
+    <entry file="file://$PROJECT_DIR$/lib/file_utils/version.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="65" selection-end="65" vertical-scroll-proportion="0.11636364">
+        <state line="1" column="18" selection-start="35" selection-end="35" vertical-scroll-proportion="0.02909091">
           <folding />
         </state>
       </provider>
