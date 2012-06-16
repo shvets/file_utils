@@ -45,7 +45,7 @@ module FileUtils
     end
   end
 
-  def substitute_vars file_name
+  def execute_template file_name, binding
     template = ERB.new read_file(file_name)
 
     template.result(binding)
