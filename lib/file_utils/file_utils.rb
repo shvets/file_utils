@@ -1,16 +1,12 @@
-module FileUtils
-  def process_dir dir, &code
-    Dir.foreach(dir) do |entry_name|
-      next if entry_name == '.' or entry_name == '..'
+require 'open3'
 
-      code.call(entry_name)
-    end
+module FileUtils
+  def create_directory dir
+    FileUtils.mkdir_p dir unless File.exist? dir
   end
 
-  def substitute_vars file_name
-    template = ERB.new read_file(file_name)
-
-    template.result(binding)
+  def delete_directory dir
+    FileUtils.rm_rf dir
   end
 
   def write_to_file from, to
@@ -29,18 +25,6 @@ module FileUtils
     File.open(file_name).read
   end
 
-  def create_directory dir
-    FileUtils.mkdir_p dir unless File.exist? dir
-  end
-
-  def delete_directory dir
-    FileUtils.rm_rf dir
-  end
-
-  def pattern_to_files dir, pattern
-    Dir.glob("#{dir}/#{pattern}")
-  end
-
   def copy_files from_dir, to_dir, pattern
     create_directory to_dir
 
@@ -49,5 +33,36 @@ module FileUtils
     FileUtils.cp_r files, to_dir
   end
 
+  def pattern_to_files dir, pattern
+    Dir.glob("#{dir}/#{pattern}")
+  end
+
+  def with_dir dir, &code
+    Dir.foreach(dir) do |entry_name|
+      next if entry_name == '.' or entry_name == '..'
+
+      code.call(entry_name)
+    end
+  end
+
+  def substitute_vars file_name
+    template = ERB.new read_file(file_name)
+
+    template.result(binding)
+  end
+
+  def execute_command(command)
+    output = nil
+    error = nil
+    status = nil
+
+    Open3.popen3(command) do |_, stdout, stderr|
+      output = stdout.readlines
+      error = stderr.readlines
+      status = $?
+    end
+
+    [output, error, status]
+  end
 end
 
