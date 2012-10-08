@@ -51,6 +51,12 @@ module FileUtils
     template.result(binding)
   end
 
+  def execute command
+    IO.popen(command).each_line do |line|
+      puts line
+    end
+  end
+  
   def execute_command(command)
     output = nil
     error = nil
