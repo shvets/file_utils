@@ -1,4 +1,5 @@
 require 'open3'
+require 'erb'
 
 module FileUtils
   def create_directory dir
