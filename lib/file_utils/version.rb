@@ -1,3 +1,3 @@
-module FileUtils
-  VERSION = "1.0.6"
+class FileUtils
+  VERSION = "1.0.7"
 end
