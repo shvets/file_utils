@@ -1,5 +1,7 @@
 class DirectoryScanner
   def scan dir, params={}
+    dir = File.expand_path(dir)
+
     files = []
 
     scan_with_files dir, tokenize(params[:includes]), tokenize(params[:excludes]), files
