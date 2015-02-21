@@ -23,3 +23,7 @@
 == Version 1.1.1
 
 * Fix issue.
+
+== Version 1.1.2
+
+* Adding includes/excludes as array.

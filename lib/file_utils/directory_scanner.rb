@@ -11,10 +11,14 @@ class DirectoryScanner
 
   private
 
-  def tokenize s
-    return [] if s.nil?
+  def tokenize val
+    return [] if val.nil?
 
-    s.split(/\s+|,/).reject {|t| t.length == 0}
+    if val.kind_of? Array
+      val
+    else
+      val.split(/\s+|,/).reject {|t| t.length == 0}
+    end
   end
 
   def scan_with_files dir, includes, excludes, files
