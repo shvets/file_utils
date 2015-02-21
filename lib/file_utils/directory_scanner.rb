@@ -1,12 +1,12 @@
 class DirectoryScanner
-  def scan dir, params={}
+  def scan dir, normalize=false, params={}
     dir = File.expand_path(dir)
 
     files = []
 
     scan_with_files dir, tokenize(params[:includes]), tokenize(params[:excludes]), files
 
-    normalize(files, dir)
+    normalize ? normalize(files, dir): files
   end
 
   private
